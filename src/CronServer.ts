@@ -4,7 +4,6 @@ import { launchChromeAndProcessLighthouseResponse } from './utils/utils';
 
 const sites = ['https://chrisfrew.in', 'https://xn--seelengeflster-tirol-yec.com/'];
 
-
 sites.forEach(site => {
     if (env.NODE_ENV === "DEVELOP") {
         console.log('Develop environment; running immediately');
