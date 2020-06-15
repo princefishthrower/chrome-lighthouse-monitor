@@ -9,7 +9,7 @@ const OAuth2 = google.auth.OAuth2;
 
 export async function getLighthouseMetrics(url: string): Promise<Array<any>> {
   const chrome = await chromeLauncher.launch({
-    chromeFlags: ['--headless']
+    chromeFlags: ['--headless', '--no-sandbox']
   });
   const opts = { port: chrome.port };
   const results = await lighthouse(url, opts);
