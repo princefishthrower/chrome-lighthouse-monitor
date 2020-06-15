@@ -4,6 +4,7 @@
   "description": "A cron server that retrieves lighthouse metrics for given sites.",
   "scripts": {
     "dev": "cp src/env/.env.develop.json src/env/.env.json && tsc && node build/CronServer.js",
+    "prod": "cp src/env/.env.production.json src/env/.env.json && tsc && node build/CronServer.js",
     "build": "cp src/env/.env.production.json src/env/.env.json && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/node-cron": "^2.0.3",
+    "@types/nodemailer": "^6.4.0",
     "chrome-launcher": "^0.13.2",
     "googleapis": "^51.0.0",
     "lighthouse": "^5.6.0",
