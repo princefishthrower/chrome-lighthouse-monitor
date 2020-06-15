@@ -8,7 +8,7 @@ if (env.NODE_ENV === "DEVELOP") {
   processSites();
 } else {
   // run lighthouse monitor once per day at 10:00
-  cron.schedule("10 10 * * *", processSites);
+  cron.schedule("15 10 * * *", processSites);
 }
 
 // Synchronously loops through all sites in SITES_TO_AUDIT, running chrome's lighthouse for each
