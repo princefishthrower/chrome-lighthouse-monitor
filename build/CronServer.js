@@ -22,7 +22,7 @@ if (_env_json_1.default.NODE_ENV === "DEVELOP") {
 }
 else {
     // run lighthouse monitor once per day at 10:00
-    node_cron_1.default.schedule("30 9 * * *", processSites);
+    node_cron_1.default.schedule("15 10 * * *", processSites);
 }
 // Synchronously loops through all sites in SITES_TO_AUDIT, running chrome's lighthouse for each
 function processSites() {
