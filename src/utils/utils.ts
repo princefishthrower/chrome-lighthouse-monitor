@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import env from "../env/.env.json";
 import ISiteInformation from "../interfaces/ISiteInformation";
 import Constants from "../constants/Constants";
 
@@ -9,7 +8,9 @@ const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 
 export async function getLighthouseMetrics(url: string): Promise<Array<any>> {
-  const chrome = await chromeLauncher.launch();
+  const chrome = await chromeLauncher.launch({
+    chromeFlags: ['--headless']
+  });
   const opts = { port: chrome.port };
   const results = await lighthouse(url, opts);
   await chrome.kill();

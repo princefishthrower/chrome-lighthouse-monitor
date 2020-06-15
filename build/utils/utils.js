@@ -21,7 +21,9 @@ const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 function getLighthouseMetrics(url) {
     return __awaiter(this, void 0, void 0, function* () {
-        const chrome = yield chromeLauncher.launch();
+        const chrome = yield chromeLauncher.launch({
+            chromeFlags: ['--headless']
+        });
         const opts = { port: chrome.port };
         const results = yield lighthouse(url, opts);
         yield chrome.kill();
