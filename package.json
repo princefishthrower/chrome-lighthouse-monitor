@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "cp src/env/.env.develop.json src/env/.env.json && tsc && node build/CronServer.js",
     "prod": "cp src/env/.env.production.json src/env/.env.json && tsc && node build/CronServer.js",
+    "start": "cp src/env/.env.production.json src/env/.env.json && tsc && node build/CronServer.js",
     "build": "cp src/env/.env.production.json src/env/.env.json && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
