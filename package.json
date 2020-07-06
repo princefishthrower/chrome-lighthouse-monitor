@@ -1,7 +1,7 @@
 {
-  "name": "lighthouse-test",
+  "name": "chrome-lighthouse-monitor",
   "version": "1.0.0",
-  "description": "A cron server that retrieves lighthouse metrics for given sites.",
+  "description": "A cron job bot that retrieves lighthouse metrics for given sites.",
   "scripts": {
     "dev": "cp src/env/.env.develop.json src/env/.env.json && tsc && node build/CronServer.js",
     "prod": "cp src/env/.env.production.json src/env/.env.json && tsc && node build/CronServer.js",
